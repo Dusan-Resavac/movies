@@ -32,6 +32,7 @@
 				<h1>Der Mann mit der Todeskralle</h1>
 				<br>
 				<a href="index.php?format=JSON">Filminfo als JSON</a>
+				<br>
 				<a href="index.php?format=QR">Filminfo als QR-Code</a>
 			</body>
 		</html>
