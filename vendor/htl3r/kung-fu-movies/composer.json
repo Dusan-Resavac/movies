@@ -1,0 +1,17 @@
+{
+    "name": "htl3r/kung-fu-movies",
+    "description": "Provides an interface to set what a kung-fu-movie has to provide",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Florian Weiss",
+            "email": "github@weissheiten.at"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HTL3R\\KungFuMovies\\": "src/"
+        }
+    },
+    "require": {}
+}

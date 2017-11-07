@@ -1,0 +1,15 @@
+{
+    "name": "resavac/filmdatenbank",
+    "description": "Wird benutzt um einen Prototypen für eine Filmdatenbank zu erstellen",
+    "type": "project",
+    "require": {
+        "htl3r/kung-fu-movies": "v1.0",
+        "endroid/qrcode": "^2.4"
+    },
+    "repositories": {
+        "filmDbPackage": {
+            "type": "vcs",
+            "url": "https://github.com/Weissheiten/htl3r.kungfumovies.git"
+        }
+    }
+}
