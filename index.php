@@ -12,18 +12,29 @@
 	
 	$movie = new movie("Bruce Lee - Der Mann mit der Todeskralle", 5, "https://www.youtube.com");
 	
-	?>
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Bruce Lee</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<h1>Der Mann mit der Todeskralle</h1>
-		<br>
-		<a href="<?php //echo $movie->getMovieInfoAsJSON()?>">Filminfo als JSON</a>
-		<a href="<?php //echo $movie->getMovieQRCodeForBrowser()?>">Filminfo als QR-Code</a>
-	</body>
-</html>
+	if(isset($_GET['format']) && ($_GET['format'] === "JSON" || $_GET['format'] === "QR")){
+		if($_GET['format'] === "JSON"){
+			header("Content-Type: application/json");
+			echo $movie->getMovieInfoAsJSON();
+		}else{
+			echo $movie->getMovieQRCodeForBrowser();
+		}
+	}else {
+		?>
+		
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<title>Bruce Lee</title>
+				<meta charset="UTF-8">
+			</head>
+			<body>
+				<h1>Der Mann mit der Todeskralle</h1>
+				<br>
+				<a href="index.php?format=JSON">Filminfo als JSON</a>
+				<a href="index.php?format=QR">Filminfo als QR-Code</a>
+			</body>
+		</html>
+		
+		<?php
+	}

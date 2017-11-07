@@ -1,2 +1,6 @@
 # movies
-creates movies with different properties and displays them using qr code or as json 
+creates movies with different properties and displays the filminfo in json format or
+shows a qrCode which leads to the MovieURL.
+
+
+

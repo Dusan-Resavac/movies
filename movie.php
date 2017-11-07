@@ -28,9 +28,9 @@
 		 */
 		public function getMovieInfoAsJSON(): string
 		{
-			return "\"name\":" . "\"" . parent::getName() . "\",
-					\"rating\":\"" . parent::getRating() . "\"
-					\"MovieUrl\":\"" . parent::getMovieURI() . "\"";
+			return "{\"name\":" . "\"" . parent::getName() . "\",
+					\"rating\":\"" . parent::getRating() . "\",
+					\"MovieUrl\":\"" . parent::getMovieURI() . "\"}";
 		}
 		
 		/**
